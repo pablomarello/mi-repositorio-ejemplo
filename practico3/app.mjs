@@ -13,9 +13,11 @@ app.get('/',(req, res) => {
 
 //Ruta GET con parámetro de ruta
 //Solicitud: http:://localhost:3000/user/123
-app.get('/user/:id', (req, res) => {
+app.get('/user/:id/:dni', (req, res) => {
         const userId = req.params.id;
+        const useDni = req.params.dni;
         console.log(`ID del usuario recibido: ${userId}`);
+        console.log(`Dni: ${useDni}`);
         res.send(`Perfil del usuario con ID: ${userId}`);
 })
 
